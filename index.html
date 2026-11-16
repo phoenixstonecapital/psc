@@ -26,7 +26,7 @@
     line-height:1.5;
     -webkit-font-smoothing:antialiased;
   }
-  .wrap{max-width:980px;margin:0 auto;padding:24px 18px 36px}
+  .wrap{max-width:1180px;margin:0 auto;padding:24px 18px 36px}
   .brand{display:flex;align-items:center;gap:16px}
   .logo{width:72px;height:72px;flex:0 0 auto;display:block}
   h1{margin:0;font-size:24px;line-height:1.2;font-weight:700}
@@ -42,7 +42,7 @@
   .summary li:last-child{margin-bottom:0}
   .summary .basis{display:block;font-size:12.5px;color:var(--muted)}
 
-  .table-wrap{margin-top:20px;border:1px solid var(--line);border-radius:10px;overflow:hidden;background:var(--card)}
+  .table-wrap{margin-top:20px;border:1px solid var(--line);border-radius:10px;overflow-x:auto;background:var(--card)}
   table{width:100%;border-collapse:collapse;font-size:14px}
   thead th{
     text-align:left;font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
@@ -53,7 +53,7 @@
   tbody td{padding:14px 12px;border-bottom:1px solid var(--line);vertical-align:top;white-space:nowrap}
   tbody tr:last-child td{border-bottom:0}
   .stock{font-weight:700}
-  .cmp-note{display:block;font-size:11.5px;color:var(--muted2);white-space:normal;margin-top:2px}
+  .cmp-note{display:block;font-size:11.5px;color:var(--muted2);white-space:nowrap;margin-top:2px}
   .neg{color:var(--red);font-weight:600}
   .sl{color:var(--red)}
   .tgt{color:var(--green)}
@@ -106,36 +106,36 @@
     <table>
       <thead>
         <tr>
-          <th scope="col">Reco Date</th>
+          <th scope="col">Date</th>
           <th scope="col">Stock</th>
           <th scope="col" class="num">Reco Price</th>
+          <th scope="col" class="num">Stop Loss</th>
+          <th scope="col" class="num">Target Price</th>
           <th scope="col" class="num">CMP</th>
           <th scope="col" class="num">Qty</th>
           <th scope="col" class="num">Invested</th>
           <th scope="col" class="num">Current Value</th>
-          <th scope="col" class="num">P&amp;L</th>
-          <th scope="col" class="num">Stop Loss</th>
-          <th scope="col" class="num">Target</th>
+          <th scope="col" class="num">Running P&amp;L</th>
           <th scope="col">Exit Date</th>
           <th scope="col" class="num">Exit Price</th>
-          <th scope="col" class="num">Total P&amp;L</th>
+          <th scope="col" class="num">Booked P&amp;L</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td data-label="Reco Date">16-Nov-2026</td>
+          <td data-label="Date">16-Nov-2026</td>
           <td data-label="Stock" class="stock">MSTR</td>
           <td data-label="Reco Price" class="num">$105.00</td>
-          <td data-label="CMP" class="num">$103.03<span class="cmp-note">as of 16 Nov 2026, 1:13pm PT</span></td>
+          <td data-label="Stop Loss" class="num sl">$98.00</td>
+          <td data-label="Target Price" class="num tgt">$120.00</td>
+          <td data-label="CMP" class="num">$103.03<span class="cmp-note">as of 16 Nov, 1:20pm PT</span></td>
           <td data-label="Qty" class="num">200</td>
           <td data-label="Invested" class="num">$21,000</td>
           <td data-label="Current Value" class="num">$20,606</td>
-          <td data-label="P&amp;L" class="num neg">−$394 (−1.88%)</td>
-          <td data-label="Stop Loss" class="num sl">$98.00</td>
-          <td data-label="Target" class="num tgt">$120.00</td>
+          <td data-label="Running P&amp;L" class="num neg">−$394 (−1.88%)</td>
           <td data-label="Exit Date">—</td>
           <td data-label="Exit Price" class="num">—</td>
-          <td data-label="Total P&amp;L" class="num">—</td>
+          <td data-label="Booked P&amp;L" class="num">—</td>
         </tr>
       </tbody>
     </table>
